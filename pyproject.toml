@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "attendance-app"
+version = "0.1.0"
+description = ""
+authors = ["Niilo Kurki <niilo.kurki@hotmail.fi>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+fpdf = "^1.7.2"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

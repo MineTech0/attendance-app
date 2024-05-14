@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Läsnäololista generaattori</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Läsnäololista generaattori</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="course_name">Kurssin nimi:</label>
+                <input type="text" id="course_name" name="course_name" required>
+            </div>
+            <div class="form-group">
+                <label for="start_date">Aloituspäivämäärä</label>
+                <input type="date" id="start_date" name="start_date" required>
+            </div>
+            <div class="form-group">
+                <label for="end_date">Lopetuspäivämäärä</label>
+                <input type="date" id="end_date" name="end_date" required>
+            </div>
+            <div class="form-group">
+                <label for="participants_file">Osallistuja csv:</label>
+                <input type="file" id="participants_file" name="participants_file" accept=".csv" required>
+                <p class="hint">CSV:n tulee sisältää sarake "name" minkä alla kaikki nimet</p>
+            </div>
+            <button type="submit">Luo PDF</button>
+        </form>
+    </div>
+</body>
+</html>
